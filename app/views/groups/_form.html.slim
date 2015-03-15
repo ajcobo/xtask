@@ -1,0 +1,9 @@
+.group-form
+  = simple_form_for(@group, remote: true) do |f|
+    = f.error_notification
+
+    .group-form-inputs
+      = f.input :name, label: false, placeholder: 'Create a new group', input_html: { class: 'group-form-name' }
+
+    .group-form-actions
+      = f.submit 'Create', class: 'group-form-submit'

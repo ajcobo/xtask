@@ -46,4 +46,16 @@ group :test do
   gem 'database_cleaner'
   gem 'launchy'
   gem 'selenium-webdriver'
+  gem 'cucumber-rails', :require => false
 end
+
+# Menu
+gem 'simple-navigation'
+
+# Use SCSS for stylesheets
+gem 'compass-rails', github: 'Compass/compass-rails', branch: 'master' #due to errors with sass
+gem 'breakpoint' #responsive
+
+gem 'rolify'
+
+gem 'carrierwave'

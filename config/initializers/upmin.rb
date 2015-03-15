@@ -6,14 +6,14 @@ module AdminOnly
   extend ActiveSupport::Concern
 
   included do
-    before_filter :authenticate_user!
+    before_filter :authenticate_mutant!
     before_filter :admin_only
   end
 
   private
 
   def admin_only
-    unless current_user.admin?
+    unless current_mutant.has_role? :admin
       redirect_to :back, :alert => "Access denied."
     end
     rescue ActionController::RedirectBackError
