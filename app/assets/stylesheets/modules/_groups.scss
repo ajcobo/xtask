@@ -49,8 +49,12 @@
   a{
     text-decoration: none;
     display: block;
+    color: black;
   }
   a:visited{
     color: black;
+  }
+  a.fa{
+    float: right;
   }
 }

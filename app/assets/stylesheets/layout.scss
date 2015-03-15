@@ -11,6 +11,8 @@
 // (columns, floats, max-widths, margins, and so on). Prefix layout classes
 // with "layout-" so they are distinct from module classes.
 // https://smacss.com/book/type-layout
+@import "font-awesome-sprockets";
+@import "font-awesome";
 @import url(http://fonts.googleapis.com/css?family=Bangers);
 
 body{
