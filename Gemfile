@@ -55,7 +55,9 @@ gem 'simple-navigation'
 # Use SCSS for stylesheets
 gem 'compass-rails', github: 'Compass/compass-rails', branch: 'master' #due to errors with sass
 gem 'breakpoint' #responsive
+gem 'font-awesome-sass'
 
 gem 'rolify'
 
 gem 'carrierwave'
+
