@@ -1,3 +1,60 @@
-// Place all the styles related to the Tasks controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.tasks{
+  width: 40%;
+  margin: 0 auto;
+}
+
+.task-form{
+  margin-bottom: 5%;
+}
+
+.task-form-inputs{
+  width: 80%;
+  margin: 0 auto;
+}
+
+.task-form-actions{
+  width: 50%;
+  margin: 0 auto;
+}
+
+.task-form-name{
+  line-height: 1em;
+  text-align: center;
+  font-size: 2em;
+  width: 100%;
+}
+
+.task-form-submit{
+  width: 100%;
+  font-size: 2em;
+}
+
+.task-items{
+  @include flexbox;
+  @include flex-direction(row);
+  @include flex-wrap(wrap);
+  @include justify-content(space-around);
+}
+
+.task-item{
+  width: 1000%;
+  text-align: center;
+  height: 10%;
+  margin-bottom: 15px;
+
+  border: 1px solid gray;
+  @include border-radius(4px);
+
+  a{
+    text-decoration: none;
+    display: block;
+    color: black;
+    font-size: 3em;
+  }
+  a:visited{
+    color: black;
+  }
+  i.fa{
+    float: right;
+  }
+}

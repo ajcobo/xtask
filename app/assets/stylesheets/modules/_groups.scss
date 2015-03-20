@@ -38,7 +38,6 @@
 
 .group-item{
   width: 1000%;
-  font-size: 3em;
   text-align: center;
   height: 10%;
   margin-bottom: 15px;
@@ -50,11 +49,12 @@
     text-decoration: none;
     display: block;
     color: black;
+    font-size: 3em;
   }
   a:visited{
     color: black;
   }
-  a.fa{
+  i.fa{
     float: right;
   }
 }

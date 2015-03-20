@@ -4,9 +4,9 @@ Rails.application.routes.draw do
   
   get 'home/index'
 
-  resources :groups
-
-  resources :tasks
+  resources :groups do
+    resources :tasks
+  end
 
   devise_for :mutants
   

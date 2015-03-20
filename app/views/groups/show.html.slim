@@ -1,9 +1,5 @@
-p#notice = notice
-
-p
-  strong Name:
-  = @group.name
-
-= link_to 'Edit', edit_group_path(@group)
-'|
-= link_to 'Back', groups_path
+.tasks
+  = render 'tasks/form'
+  .task-items
+    / = render partial: 'tasks/task', collection: @tasks, group: @group
+    = render @tasks, group: @group

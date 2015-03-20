@@ -4,4 +4,5 @@ class Group < ActiveRecord::Base
   has_many :tasks, as: :taskable
 
   validates :name, presence: true
+
 end
