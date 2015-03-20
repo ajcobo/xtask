@@ -57,6 +57,8 @@ gem 'compass-rails', github: 'Compass/compass-rails', branch: 'master' #due to e
 gem 'breakpoint' #responsive
 gem 'font-awesome-sass'
 
+gem 'awesome_print'
+
 gem 'rolify'
 
 gem 'carrierwave'

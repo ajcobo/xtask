@@ -2,4 +2,4 @@
   = render 'tasks/form'
   .task-items
     / = render partial: 'tasks/task', collection: @tasks, group: @group
-    = render @tasks, group: @group
+    = render @tasks, object: @group
