@@ -5,6 +5,7 @@ class CreateAdminService
         mutant.password_confirmation = Rails.application.secrets.admin_password
         mutant.confirm!
         mutant.name = Rails.application.secrets.admin_name
+        mutant.add_role :admin
       end
   end
 end

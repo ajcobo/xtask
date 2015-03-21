@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   devise_for :mutants
   
   #admin
-  authenticate :mutant, lambda { |u| u.admin? } do
+  authenticate :mutant, lambda { |m| m.has_role? :admin } do
     mount Upmin::Engine => '/admin'
   end
   # The priority is based upon order of creation: first created -> highest priority.
