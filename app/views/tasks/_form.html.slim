@@ -1,8 +1,9 @@
-= simple_form_for(@task) do |f|
-  = f.error_notification
+.task-form
+  = simple_form_for([@group, @task],  remote: true) do |f|
+    = f.error_notification
 
-  .form-inputs
-    = f.input :name
+    .task-form-inputs
+      = f.input :name, label: false, placeholder: 'Create a new task', input_html: { class: 'task-form-name' }
 
-  .form-actions
-    = f.button :submit
+    .task-form-actions
+      = f.submit 'Create', class: 'task-form-submit'

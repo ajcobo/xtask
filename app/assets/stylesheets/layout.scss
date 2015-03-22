@@ -11,9 +11,11 @@
 // (columns, floats, max-widths, margins, and so on). Prefix layout classes
 // with "layout-" so they are distinct from module classes.
 // https://smacss.com/book/type-layout
+@import "font-awesome-sprockets";
+@import "font-awesome";
 @import url(http://fonts.googleapis.com/css?family=Bangers);
 
-body{
+body {
   font-family: 'Bangers', cursive;
 
   height: 100%;
@@ -21,6 +23,14 @@ body{
   margin: 0 auto;
 }
 
-#main{
+header, nav{
+  flex: 1 100%;
+}
+
+#main {
   padding: 0 10% 0 10%;
+}
+
+a {
+  text-decoration: none;
 }

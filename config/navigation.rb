@@ -41,7 +41,7 @@ SimpleNavigation::Configuration.run do |navigation|
     # name - will be displayed in the rendered navigation. This can also be a call to your I18n-framework.
     # url - the address that the generated item links to. You can also use url_helpers (named routes, restful routes helper, url_for etc.)
     # options - can be used to specify attributes that will be included in the rendered navigation item (e.g. id, class etc.)
-    #           some special options that can be set:
+    #           some special options that can be set:z
     #           :if - Specifies a proc to call to determine if the item should
     #                 be rendered (e.g. <tt>if: -> { current_user.admin? }</tt>). The
     #                 proc should evaluate to a true or false value and is evaluated in the context of the view.
@@ -53,7 +53,9 @@ SimpleNavigation::Configuration.run do |navigation|
     #                            when the item should be highlighted, you can set a regexp which is matched
     #                            against the current URI.  You may also use a proc, or the symbol <tt>:subpath</tt>.
     #
-    primary.item :groups, 'Groups', groups_path, if: -> { mutant_signed_in? }
+    primary.dom_class = 'menu-ul'
+    primary.item :groups, 'Groups', groups_path, class: 'menu-li', if: -> { mutant_signed_in? }
+    primary.item :mutants, 'Mutants', mutants_path, class: 'menu-li', if: -> { current_mutant.has_role? :admin }
     # Add an item which has a sub navigation (same params, but with block)
     # primary.item :mutants, 'Mutants', mutants_path
 
