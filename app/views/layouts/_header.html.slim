@@ -1,3 +1,4 @@
 header
   .header-logo
-  = render 'layouts/menu'
+  - if current_mutant.present?
+    = render 'layouts/menu'

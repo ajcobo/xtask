@@ -1,0 +1,15 @@
+.mutant-item
+  .mutant-item-avatar
+    - if mutant.avatar.present?
+      = image_tag mutant.avatar
+  .mutant-item-name
+    = mutant.name
+  .mutant-item-power
+    = mutant.power
+  .mutnat-item-email
+    = mutant.email
+  = link_to edit_mutant_path(mutant) do
+    span.mutant-item-edit.fa.fa-pencil-square-o.fa-lg
+  = link_to mutant, data: {:confirm => 'Are you sure?'}, :method => :delete do
+    span.mutant-item-remove.fa.fa-times.fa-lg
+  = link_to mutant.name, mutant

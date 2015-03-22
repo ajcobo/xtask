@@ -1,0 +1,124 @@
+.menu-nav{
+  display: block;
+  width: 40%;
+  margin: -36px auto 0 auto;
+  padding: 0;
+  text-transform: uppercase;
+}
+
+.menu-ul{
+  list-style: none;
+  margin: 0 20%;
+  @include flexbox;
+  @include flex-direction(row);
+  @include flex-wrap(wrap);
+  @include justify-content(space-around)
+}
+
+.menu-li{
+  padding: 0 10px;
+  height: 2.25em;
+  line-height: 2.25em;
+  position: relative;
+  border: 0;
+}
+
+/* .menu-ul li:hover:after{
+    position: relative;
+    display: block;
+    content: "";
+    border-bottom: 2px solid $menu-primary;
+    left: 10%;
+    width: 80%;
+    margin-top: -2px;
+} */
+
+.menu-ul a{
+  padding: 0;
+  display: block;
+  color: white;
+  font-size: x-large;
+  font-weight: normal;
+  outline: none;
+  cursor: pointer;
+}
+
+.menu-ul a.selected{
+  color: $menu-primary;
+}
+
+.menu-ul a:hover{
+  color: $menu-primary;
+}
+
+
+
+// .menu-ul > li + li:before{
+//   content: "";
+//   position: absolute;
+//   border-left: 2px solid $menu-primary;
+//   bottom: 25%;
+//   left: 0;
+//   height: 50%;
+// }
+
+// //Show submenu
+
+// .menu-li ul{
+//   position: absolute;
+//   display: none;
+//   list-style: none;
+//   list-style-type:none;
+//   width: 100%;
+//   z-index: 1;
+//   background-color: $background-basic;
+  
+//   //center
+//   margin-left: auto;
+//   margin-right: auto;
+//   left: 0;
+//   right: 0;
+// }
+
+// .menu-li:hover{
+//   ul{
+//     @include flexbox;
+//     @include flex-direction(column);
+//     @include flex-wrap(wrap);
+//     position: absolute;
+//     top: 100%; left: 0;
+//   }
+// }
+
+// //Animate
+
+// /* .menu-li ul li:hover:after{
+//   position: relative;
+//   display: block;
+//   content: "";
+//   border-bottom: 2px solid $menu-primary;
+//   left: 25%;
+//   width: 50%;
+//   margin-top: -2px;
+// } */
+
+// .menu-li-sub{
+//   position: relative;
+//   display: block;
+//   font-weight: normal;
+//   white-space: nowrap;
+//   border: none;
+//   line-height: 2em;
+// }
+
+// .menu-li-sub a{
+//   display: block;
+// }
+
+// .menu-li-sub a.selected{
+//   color: $menu-secondary;
+// }
+
+// .menu-li-sub a:hover{
+//   color: $menu-tertiary;
+// }
