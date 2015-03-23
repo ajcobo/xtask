@@ -1,4 +1,10 @@
 .task-item
-  i.task-item-remove.fa.fa-times.fa-lg
-  i.task-item-edit.fa.fa-pencil-square-o.fa-lg
+  .task-item-mutants
+    - @group.mutants.each do |mutant|
+      .task-item-mutant
+      = image_tag mutant.avatar.thumb
+    span.task-mutant-add.fa.fa-user-plus.fa-lg
+
+  span.task-item-remove.fa.fa-times.fa-lg
+  span.task-item-edit.fa.fa-pencil-square-o.fa-lg
   = link_to task.name, [@group, @task]

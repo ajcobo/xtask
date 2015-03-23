@@ -1,11 +1,13 @@
-= simple_form_for(@mutant) do |f|
-  = f.error_notification
+.mutant-form
+  = simple_form_for(@mutant) do |f|
+    = f.error_notification
 
-  .form-inputs
-    = f.input :email 
-    = f.input :password
-    = f.input :avatar, as: :image_preview
-    = f.input :power
-    = f.input :name
-  .form-actions
-    = f.button :submit
+    .mutant-form-inputs
+      = f.input :email, required: true, autofocus: true
+      = f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @validatable)
+      = f.input :password_confirmation, required: true
+      = f.input :avatar, as: :image_preview
+      = f.input :power
+      = f.input :name
+    .mutant-form-actions
+      = f.button :submit
