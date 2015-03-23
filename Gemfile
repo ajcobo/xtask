@@ -56,7 +56,9 @@ gem 'simple-navigation'
 gem 'compass-rails', github: 'Compass/compass-rails', branch: 'master' #due to errors with sass
 gem 'breakpoint' #responsive
 gem 'font-awesome-sass'
+# Images
 gem 'simple_form_fancy_uploads'
+gem 'mini_magick'
 
 gem 'awesome_print'
 

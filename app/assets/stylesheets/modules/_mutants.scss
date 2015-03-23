@@ -1,42 +1,42 @@
-.groups{
+.mutants{
   width: 40%;
   margin: 0 auto;
 }
 
-.group-form{
+.mutant-form{
   margin-bottom: 5%;
 }
 
-.group-form-inputs{
+.mutant-form-inputs{
   width: 80%;
   margin: 0 auto;
 }
 
-.group-form-actions{
+.mutant-form-actions{
   width: 50%;
   margin: 0 auto;
 }
 
-.group-form-name{
+.mutant-form-name{
   line-height: 3em;
   text-align: center;
   font-size: 2em;
   width: 100%;
 }
 
-.group-form-submit{
+.mutant-form-submit{
   width: 100%;
   font-size: 2em;
 }
 
-.group-items{
+.mutant-items{
   @include flexbox;
   @include flex-direction(row);
   @include flex-wrap(wrap);
   @include justify-content(space-around);
 }
 
-.group-item{
+.mutant-item{
   width: 100%;
   text-align: center;
   height: 10%;
@@ -58,5 +58,29 @@
     margin-bottom: 1%;
     margin-top: 1%;
     float: right;
+  }
+}
+
+.mutant-form{
+  width: 20%;
+  margin: 0 auto;
+}
+
+.mutant-form-inputs{
+  margin: 10px 0;
+  label{
+    margin-right: 1%;
+  }
+  input{
+    float: right;
+    clear: both;
+  }
+}
+
+.mutant-form-actions{
+  input{
+    position:relative;
+    top:50%; 
+    left:50%;
   }
 }

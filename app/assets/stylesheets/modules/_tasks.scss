@@ -37,7 +37,7 @@
 }
 
 .task-item{
-  width: 1000%;
+  width: 100%;
   text-align: center;
   height: 10%;
   margin-bottom: 15px;
@@ -53,10 +53,19 @@
   a:visited{
     color: black;
   }
-  i.fa{
+  span.fa{
     margin-right: 1%;
     margin-bottom: 1%;
     margin-top: 1%;
     float: right;
+  }
+  .task-item-mutants{
+    height: 10%;
+    display: block;
+  }
+
+  span.fa.task-mutant-add{
+    float: left;
+    font-size: xx-large;
   }
 }

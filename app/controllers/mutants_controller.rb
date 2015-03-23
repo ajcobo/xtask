@@ -69,6 +69,6 @@ class MutantsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def mutant_params
-      params.require(:mutant).permit(:name, :power, :email, :avatar)
+      params.require(:mutant).permit(:name, :power, :email, :avatar, :password, :password_confirmation)
     end
 end
