@@ -5,5 +5,6 @@ class Group < ActiveRecord::Base
 
   validates :name, presence: true
   accepts_nested_attributes_for :tasks
+  accepts_nested_attributes_for :group_mutants
 
 end

@@ -1,6 +1,14 @@
 class MutantsController < ApplicationController
   before_action :set_mutant, only: [:show, :edit, :update, :destroy]
 
+  def search 
+    @mutants = Mutant.finder(params[:q]).page(params[:page]).per(params[:per])
+
+    respond_to do |format|
+      format.html
+      format.json{ render json: @mutants}
+    end
+  end
   # GET /mutants
   # GET /mutants.json
   def index

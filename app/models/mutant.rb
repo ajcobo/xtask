@@ -8,4 +8,7 @@ class Mutant < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable,
          :confirmable
   mount_uploader :avatar, AvatarUploader
+
+  #search http://gistflow.com/posts/428-autocomplete-with-rails-and-select2
+  scope :finder, lambda { |q| where("name like :q", q: "%#{q}%") }
 end
