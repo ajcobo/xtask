@@ -6,10 +6,11 @@
     = link_to mutant.name, mutant
   .mutant-item-power
     = mutant.power
-  .mutnat-item-email
+  .mutant-item-email
     = mutant.email
-  = link_to edit_mutant_path(mutant) do
-    span.mutant-item-edit.fa.fa-pencil-square-o.fa-lg
-  = link_to mutant, data: {:confirm => 'Are you sure?'}, :method => :delete do
-    span.mutant-item-remove.fa.fa-times.fa-lg
+  .mutant-controlls
+    = link_to edit_mutant_path(mutant) do
+      span.mutant-item-edit.fa.fa-pencil-square-o
+    = link_to mutant, data: {:confirm => 'Are you sure?'}, :method => :delete do
+      span.mutant-item-remove.fa.fa-times
   

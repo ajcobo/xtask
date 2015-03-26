@@ -41,6 +41,7 @@
   text-align: center;
   height: 10%;
   margin-bottom: 15px;
+  position: relative;
 
   border: 1px solid gray;
   @include border-radius(4px);
@@ -57,8 +58,21 @@
     margin-right: 1%;
     margin-bottom: 1%;
     margin-top: 1%;
-    float: right;
+    float: left;
   }
+}
+
+.mutant-item-avatar img{
+  width: 100px;
+  height: 100px;
+}
+
+.mutant-controlls{
+  position:absolute;
+  right: 0;
+  top: 0;
+
+  width: 100px;
 }
 
 .mutant-form{
