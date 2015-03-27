@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require jquery.jcrop
+//= require select2
+//= require jquery_nested_form
 //= require turbolinks
 //= require_tree .

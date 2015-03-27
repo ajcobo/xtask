@@ -2,3 +2,7 @@
   span.group-item-remove.fa.fa-times.fa-lg
   span.group-item-edit.fa.fa-pencil-square-o.fa-lg
   = link_to group.name, group
+  .group-item-avatars
+    - group.mutants.each do |mutant|
+      .group-item-avatar
+        = image_tag mutant.avatar.thumb
