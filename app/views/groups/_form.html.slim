@@ -1,10 +1,15 @@
 .group-form
-  = simple_form_for(@group, remote: true) do |f|
+  = simple_nested_form_for(@group, remote: true) do |f|
     = f.error_notification
 
     .group-form-inputs
       = f.input :name, label: false, placeholder: 'Create a new group', input_html: { class: 'group-form-name' }
       = f.simple_fields_for :group_mutants, f.object.group_mutants.build do |g|
-        = g.input :mutant_id, class: 'select2 ajax', as: :hidden, data: {source: search_mutants_path}
+        = g.input :mutant_id, as: :hidden,  input_html: { class: 'select2 ajax', data: {source: search_mutants_path}}
+
+        = g.link_to_remove do
+          span.group-form-inputs-remove.fa.fa-times
+      = f.link_to_add :group_mutants do
+        span.group-form-inputs-add.fa.fa-user-plus
     .group-form-actions
       = f.submit 'Create', class: 'group-form-submit'

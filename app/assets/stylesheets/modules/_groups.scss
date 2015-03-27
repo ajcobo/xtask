@@ -10,6 +10,28 @@
 .group-form-inputs{
   width: 80%;
   margin: 0 auto;
+
+  .group-form-inputs-remove{
+    color: $pomegranate;
+  }
+  .group-form-inputs-add{
+    color: $emerald;
+  }
+
+  .fields{
+    width: 160px;
+    float: left;
+    clear: both;
+  }
+  .group_group_mutants_mutant_id{
+    width: 130px;
+    float: left;
+  }
+
+  span{
+    float: left;
+  }
+
 }
 
 .group-form-actions{
@@ -62,5 +84,15 @@
 
   span.fa.task-mutant-add{
     float: left;
+  }
+}
+
+.group-item-avatar{
+  width: 100px;
+  height: 100px;
+  float: left;
+  img {
+    width: 100px;
+    height: 100px;
   }
 }
